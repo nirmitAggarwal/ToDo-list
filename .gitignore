@@ -1,0 +1,124 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f1f6; /* Lavender background */
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.header {
+  text-align: center;
+  font-size: 28px;
+  color: #6a5d85; /* Dark lavender header color */
+  margin-bottom: 20px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task {
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: #e7e5eb; /* Light lavender task background */
+  border-radius: 8px;
+  font-size: 18px;
+  color: #444;
+  position: relative;
+}
+
+.task-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.edit-button,
+.delete-button {
+  padding: 6px 10px;
+  margin-left: 8px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.edit-button {
+  background-color: #8a70a3; /* Dark lavender edit button color */
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #70588c; /* Darker lavender on hover */
+}
+
+.delete-button {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #e60000;
+}
+
+.task-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.task-input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f5f5f5;
+}
+
+.task-button {
+  padding: 12px 24px;
+  background-color: #8a70a3; /* Dark lavender add button color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.task-button:hover {
+  background-color: #70588c; /* Darker lavender on hover */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .header {
+    font-size: 24px;
+  }
+
+  .task-input {
+    padding: 10px;
+  }
+
+  .task-button {
+    padding: 10px 20px;
+  }
+}

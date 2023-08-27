@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <title>Todo List</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="header">Todo List</h1>
+    <ul class="task-list">
+      <% tasks.forEach(task => { %>
+        <li class="task">
+          <%= task.description %>
+          <div class="task-buttons">
+            <form action="/delete/<%= task._id %>" method="POST">
+              <button type="submit" class="delete-button">Task Complete</button>
+            </form>
+          </div>
+        </li>
+      <% }); %>
+    </ul>
+    <form action="/" method="POST" class="task-form">
+      <input type="text" name="description" placeholder="Add a new task" class="task-input" required>
+      <button type="submit" class="task-button">Add Task</button>
+    </form>
+  </div>
+</body>
+</html>
